@@ -11,7 +11,7 @@ class Solution {
         String s = "" + x;
         int n = s.length();
         if (n % 2 == 1) {
-            return 0;
+            return 0; 
         }
         int a = 0, b = 0;
         for (int i = 0; i < n / 2; ++i) {
@@ -22,4 +22,4 @@ class Solution {
         }
         return a == b ? 1 : 0;
     }
-}
+} 
