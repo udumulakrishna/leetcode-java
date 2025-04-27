@@ -1,41 +1,33 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Scanner;
 
-class Codechef
-{
-    public static void main (String[] args) throws java.lang.Exception
-    {
-        // your code goes here
+public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Read the number of test cases
         int t = scanner.nextInt();
 
-        // Process each test case
         while (t-- > 0) {
-            // Read the size of the array
             int n = scanner.nextInt();
-
-            // Create an array to hold the elements
-            int[] arr = new int[n];
-
-            // Read the array elements
+            int x = scanner.nextInt();
+            int[] a = new int[n];
+            int[] b = new int[n];
+            
             for (int i = 0; i < n; i++) {
-                arr[i] = scanner.nextInt();
+                a[i] = scanner.nextInt();
             }
-
-            // Find the maximum element
-            int maximum = arr[0];
-            for (int i = 1; i < n; i++) {
-                if (arr[i] > maximum) {
-                    maximum = arr[i];
+            
+            for (int j = 0; j < n; j++) {
+                b[j] = scanner.nextInt();
+            }
+            int ans = 0;
+            for (int i = 0; i < n; i++) {
+                if (a[i] >= x) {
+                    ans += b[i];
                 }
             }
-
-            // Print the maximum element
-            System.out.println(maximum);
+            
+            System.out.println(ans);
         }
-
+        
+        scanner.close();
     }
 }
