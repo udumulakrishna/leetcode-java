@@ -9,4 +9,4 @@ class Solution {
         }
         return -1;
     }
-}
+}1015. Smallest Integer Divisible by K1015. Smallest Integer Divisible by K
